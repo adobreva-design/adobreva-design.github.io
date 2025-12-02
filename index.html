@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<style>
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .box {
+        width: 160px;
+        height: 160px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.6s ease;
+    }
+
+    /* Default SVG visible */
+    .box .default {
+        opacity: 1;
+    }
+
+    /* Hover SVG hidden initially */
+    .box .hover {
+        opacity: 0;
+    }
+
+    /* Swap on hover */
+    .box:hover .default {
+        opacity: 0;
+    }
+
+    .box:hover .hover {
+        opacity: 1;
+    }
+</style>
 </head>
+
 <body>
-  <h1>Hello, Im Ana</h1>
+
+
+<div class="container">
+
+    <div class="box" onclick="location.href='page1.html'">
+        <img class="default" src="Property 4=Default.svg" alt="">
+        <img class="hover" src="yellow chair.svg" alt="">
+    </div>
+
+    <div class="box" onclick="location.href='page2.html'">
+        <img class="default" src="Property 3=Default.svg" alt="">
+        <img class="hover" src="red chair.svg" alt="">
+    </div>
+
+    <div class="box" onclick="location.href='page3.html'">
+        <img class="default" src="Property 1=Default.svg" alt="">
+        <img class="hover" src="blue chair.svg" alt="">
+    </div>
+
+    <div class="box" onclick="location.href='page4.html'">
+        <img class="default" src="Property 2=Default.svg" alt="">
+        <img class="hover" src="green chair.svg" alt="">
+    </div>
+
+</div>
+
 </body>
 </html>
